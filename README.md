@@ -6,7 +6,7 @@ colour-carbon
 ## Prerequisites
 
 * python 2.x
-* 256 color supported terminal
+* 256 colour supported terminal
 
 ## Installation
 
