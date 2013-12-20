@@ -18,7 +18,7 @@ clone colour-carbon git repo.
 go to a carbon product home and run colour carbon from there
 
     me@lap:~/MY_CHECKOUTS$ cd ~CARBON/wso2as-4.1.0
-    me@lap:~CARBON/wso2as-4.1.0$ python ~/checkouts/colour-carbon/cc.py
+    me@lap:~CARBON/wso2as-4.1.0$ python ~/MY_CHECKOUTS/colour-carbon/cc.py
     
 ## Aliases
     
