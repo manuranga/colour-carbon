@@ -50,3 +50,4 @@ then you will be able to run colour carbon by just typeing rr inside product hom
 * adding support to OSGi console mode
 * support viewing log files
 * adding a config file to change colours ect.
+* start the server in background
