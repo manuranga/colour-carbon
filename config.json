@@ -1,0 +1,15 @@
+{ "colourMap": {
+    "unknownLine": 6,
+    "infoLog": 113,
+    "warnLog": 184,
+    "errorLog": 197,
+    "debugLog": 183,
+    "wireIn": 70,
+    "wireOut": 58,
+    "msg": 15,
+    "exception": 168,
+    "exceptionClass": 167,
+    "exceptionLine": 161,
+    "exceptionFile": 162,
+    "time": 237
+} }

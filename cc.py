@@ -2,6 +2,8 @@ import sys
 import subprocess
 import signal
 import re
+from os import path
+import json
 
 process = None  # global var to hold carbon server process
 colourMap = {"unknownLine": 6,
@@ -95,11 +97,22 @@ def handler(signum=None, frame=None):
         processLine(line)
     sys.exit(0)
 
+########## Signal hooks ###########
 
 for sig in [signal.SIGTERM, signal.SIGINT, signal.SIGHUP, signal.SIGQUIT]:
     signal.signal(sig, handler)
 
+########## Load Config ############
+
+configPath = path.join(path.expanduser("~"), ".ccrc", "config.json")
+configPath = configPath if path.isfile(configPath) else path.join(path.dirname(path.realpath(__file__)), "config.json")
+
+if path.isfile(configPath):
+    config = json.load(open(configPath))
+    colourMap = config['colourMap']
+
 ############## Main ###############
+
 args = ["./bin/wso2server.sh"] + sys.argv[1:]
 process = subprocess.Popen(args, stdout=subprocess.PIPE)
 for line in iter(process.stdout.readline, ''):
