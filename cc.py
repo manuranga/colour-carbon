@@ -31,12 +31,13 @@ def processLine(line):
 def processException(line):
     if line.startswith('\tat'):
         cPrint('exception', '\tat ')
-        groups = re.search('at (.*)\((.*):(.*)\)', line).groups()
+        groups = re.search('at (.*)\(([^:]*)(:?.*)\)', line).groups()
         cPrint('exceptionClass', groups[0])
         cPrint('exception', '(')
         cPrint('exceptionFile', groups[1])
-        cPrint('exception', ':')
-        cPrint('exceptionLine', groups[2])
+        if groups[2].startswith(':'):
+            cPrint('exception', ':')
+            cPrint('exceptionLine', groups[2][1:])
         cPrint('exception', ')')
         ePrint('\n')
     elif line.startswith('\t...'):
