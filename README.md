@@ -51,3 +51,6 @@ then you will be able to run colour carbon by just typeing rr inside product hom
 * support viewing log files
 * adding a config file to change colours ect.
 * start the server in background
+
+
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/b9f2ca743a1cf23125b0ca925b799cf9 "githalytics.com")](http://githalytics.com/manuranga/colour-carbon)
