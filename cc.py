@@ -22,7 +22,7 @@ colourMap = {"unknownLine": 6,
 
 
 def processLine(line):
-    if line.startswith("["):
+    if re.match("\[\d{4}-\d{2}-\d{2}", line):
         processLogLine(line)
     elif line.startswith("\t") or re.match("[a-zA-Z][\w\.]*: ", line):
         processException(line)
